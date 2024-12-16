@@ -1,5 +1,5 @@
 body { /* Correction du point-virgule */
-    background-image: url('bg/backg.png'); /* Vérifiez que le fichier 'backg.png' existe dans le dossier 'bg' */
+    background-image: url('backg.png'); /* Vérifiez que le fichier 'backg.png' existe dans le dossier 'bg' */
     margin: 0;
     font-family: 'police', sans-serif; /* Ajout d'une police de secours */
 }
@@ -38,5 +38,5 @@ a {
 
 @font-face {
     font-family: 'police';
-    src: url('fonts/police.ttf'); /* Vérifiez que ce fichier existe dans le dossier 'fonts' */
+    src: url('police.ttf'); /* Vérifiez que ce fichier existe dans le dossier 'fonts' */
 }
