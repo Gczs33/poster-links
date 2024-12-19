@@ -24,20 +24,12 @@ h2{
 .baumer, .fortop, .inserm, .dossier {
     text-align: center;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .baumer:hover, .fortop:hover, .inserm:hover, .dossier:hover {
-    display: inline-block;
-    padding: 20px 40px;
-    background-color: #3498db;
-    color: blue;
-    text-align: center;
-    font-size: 18px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer; /* Grossissement au survol */
-}
+    transform: scale(1.2); /* Grossissement au survol */
+    box-shadow: 0 0 20px 10px cyan; /* Lueur externe */
 
 a {
     text-decoration: none; /* Supprime le soulignement */
