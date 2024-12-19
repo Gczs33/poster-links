@@ -1,22 +1,27 @@
-body { /* Correction du point-virgule */
-    background-image: url('backg.png'); /* Vérifiez que le fichier 'backg.png' existe dans le dossier 'bg' */
+body {
+    background-image: url('backg.png');
     margin: 0;
-    font-family: 'police', sans-serif; /* Ajout d'une police de secours */
+    font-family: 'police', sans-serif;
 }
 
-h1{
+h1 {
     color: white;
     text-align: center;
+    font-size: 1.8rem; /* Taille adaptée aux petits écrans */
+    margin: 10px;
 }
 
-h2{
+h2 {
     color: cyan;
     text-align: center;
+    font-size: 1.4rem; /* Taille adaptée aux petits écrans */
+    margin: 10px;
 }
 
 .pick {
     display: flex;
-    justify-content: center; /* Centrage horizontal des éléments */
+    flex-wrap: wrap; /* Permet un retour à la ligne des éléments */
+    justify-content: center;
     gap: 20px; /* Espacement entre les éléments */
     margin: 20px 0;
 }
@@ -25,18 +30,47 @@ h2{
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 150px; /* S'adapte à l'écran, minimum 150px */
+    max-width: 200px; /* Limite la largeur */
 }
 
 .baumer:hover, .fortop:hover, .inserm:hover, .dossier:hover {
     transform: scale(1.2); /* Grossissement au survol */
-    box-shadow: 0 0 20px 10px cyan; /* Lueur externe */
+    box-shadow: 0 0 20px 10px rgba(0, 255, 255, 0.5); /* Lueur externe */
+}
 
 a {
-    text-decoration: none; /* Supprime le soulignement */
+    text-decoration: none;
     color: cyan;
 }
 
 @font-face {
     font-family: 'police';
-    src: url('police.ttf'); /* Vérifiez que ce fichier existe dans le dossier 'fonts' */
+    src: url('police.ttf');
+}
+
+/* Design responsive pour les petits écrans */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem; /* Réduction de la taille de la police */
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .pick {
+        gap: 10px; /* Réduction de l'espacement */
+        margin: 10px 0;
+    }
+
+    .baumer, .fortop, .inserm, .dossier {
+        flex: 1 1 100px; /* Plus petit minimum */
+        max-width: 120px; /* Limite adaptée */
+    }
+
+    .baumer img, .fortop img, .inserm img, .dossier img {
+        width: 100%; /* Ajuste les images à leur conteneur */
+        height: auto; /* Conserve les proportions */
+    }
 }
