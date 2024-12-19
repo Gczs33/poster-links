@@ -1,76 +1,87 @@
+/* Base du site */
 body {
-    background-image: url('backg.png');
     margin: 0;
-    font-family: 'police', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
-h1 {
+/* En-tête */
+header {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #3498db;
     color: white;
-    text-align: center;
-    font-size: 1.8rem; /* Taille adaptée aux petits écrans */
-    margin: 10px;
 }
 
-h2 {
-    color: cyan;
-    text-align: center;
-    font-size: 1.4rem; /* Taille adaptée aux petits écrans */
-    margin: 10px;
+header h1 {
+    font-size: 1.8rem;
+    margin: 10px 0;
 }
 
-.pick {
+header h2 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+/* Section principale */
+main {
     display: flex;
-    flex-wrap: wrap; /* Permet un retour à la ligne des éléments */
-    justify-content: center;
-    gap: 20px; /* Espacement entre les éléments */
-    margin: 20px 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
 }
 
-.baumer, .fortop, .inserm, .dossier {
+/* Cartes de source */
+.source-card {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 150px; /* S'adapte à l'écran, minimum 150px */
-    max-width: 200px; /* Limite la largeur */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.baumer:hover, .fortop:hover, .inserm:hover, .dossier:hover {
-    transform: scale(1.2); /* Grossissement au survol */
-    box-shadow: 0 0 20px 10px rgba(0, 255, 255, 0.5); /* Lueur externe */
+.source-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-a {
-    text-decoration: none;
-    color: cyan;
+.source-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
 }
 
-@font-face {
-    font-family: 'police';
-    src: url('police.ttf');
+.source-card p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #3498db;
 }
 
-/* Design responsive pour les petits écrans */
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
-    h1 {
-        font-size: 1.5rem; /* Réduction de la taille de la police */
+    header h1 {
+        font-size: 1.5rem;
     }
 
-    h2 {
-        font-size: 1.2rem;
+    header h2 {
+        font-size: 1rem;
     }
 
-    .pick {
-        gap: 10px; /* Réduction de l'espacement */
-        margin: 10px 0;
-    }
-
-    .baumer, .fortop, .inserm, .dossier {
-        flex: 1 1 100px; /* Plus petit minimum */
-        max-width: 120px; /* Limite adaptée */
-    }
-
-    .baumer img, .fortop img, .inserm img, .dossier img {
-        width: 100%; /* Ajuste les images à leur conteneur */
-        height: auto; /* Conserve les proportions */
+    .source-card p {
+        font-size: 0.9rem;
     }
 }
