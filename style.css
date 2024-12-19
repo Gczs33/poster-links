@@ -28,7 +28,15 @@ h2{
 }
 
 .baumer:hover, .fortop:hover, .inserm:hover, .dossier:hover {
-    transform: scale(1.2); /* Grossissement au survol */
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #3498db;
+    color: blue;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Grossissement au survol */
 }
 
 a {
