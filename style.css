@@ -4,6 +4,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
+    display: flex; /* Flexbox pour centrer le contenu */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Assure que le contenu occupe toute la hauteur de l'écran */
 }
 
 /* En-tête */
@@ -12,6 +17,7 @@ header {
     padding: 20px 10px;
     background-color: #3498db;
     color: white;
+    width: 100%; /* Étendre en largeur */
 }
 
 header h1 {
@@ -29,8 +35,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    justify-content: center;
+    width: 100%;
     gap: 15px;
+    padding: 20px;
 }
 
 /* Cartes de source */
@@ -69,6 +77,7 @@ footer {
     background-color: #333;
     color: white;
     font-size: 0.9rem;
+    width: 100%; /* Étendre en largeur */
 }
 
 /* Responsive */
